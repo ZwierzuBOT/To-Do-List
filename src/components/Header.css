@@ -1,0 +1,317 @@
+
+
+
+
+
+body{
+  overflow-x: hidden;
+}
+
+
+.Header{
+
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to right, darkblue, rgb(0,150,255));
+    box-shadow: 0px 10px 10px 0 black;
+  }
+  
+.Links{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5em;
+    transform: translateX(0%);
+    transition: all .5s ease-in-out;
+}
+
+.inactive{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 5em;
+  transform: translateX(0%);
+  transition: all .5s ease-in-out;
+}
+
+
+
+.Home,.Contact,.About, .Portfolio{
+  color: white;
+  background: transparent;
+  text-decoration: none;
+  border: none; 
+  outline: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 1em 2em 1em 2em;
+  transition: all 1s ease-in-out;
+}
+  
+
+
+
+.Portfolio::after{
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: .15em;
+  background-color: gray;
+  bottom: .9em;
+  left: 12%;
+  transition: all .5s ease-in-out;
+  border-radius: 1em;
+}
+
+
+.Portfolio:hover::after{
+  left: 5%;
+  width: 6em;
+  background-color: rgb(192, 192, 0);
+}
+
+
+
+.Home::after{
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: .15em;
+  background-color: gray;
+  bottom: .9em;
+  left: 37%;
+  transition: all .5s ease-in-out;
+  border-radius: 1em;
+}
+
+
+.Home:hover::after{
+  left: 31%;
+  width: 5em;
+  background-color: rgb(192, 192, 0);
+}
+
+
+.About::after{
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: .15em;
+  background-color: gray;
+  bottom: .9em;
+  left: 60%;
+  transition: all .5s ease-in-out;
+  border-radius: 1em;
+}
+
+
+.About:hover::after{
+  left: 55%;
+  width: 5em;
+  background-color: rgb(192, 192, 0);
+}
+
+
+.Contact::after{
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: .15em;
+  background-color: gray;
+  bottom: .9em;
+  left: 85%;
+  transition: all .5s ease-in-out;
+  border-radius: 1em;
+}
+
+
+.Contact:hover::after{
+  left: 79%;
+  width: 5.5em;
+  background-color: rgb(192, 192, 0);
+}
+
+a.active button{
+  color: yellow;
+
+}
+
+
+.Menu{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  cursor: pointer;
+}
+
+.Menu-Parent{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  right: 2em;
+  border: none;
+  outline: none;
+}
+
+
+
+.parts{
+  width: 4em;
+  height: 0.55em;
+  border-radius: 2em;
+  background-color: rgb(255, 255, 255);
+  margin-top: .2em ;
+  margin-bottom:.2em;
+}
+
+
+.MZ-Logo{
+position: absolute;
+top: 0;
+left: 0em;
+height: 17vh;
+}
+
+
+.Contact:hover, .About:hover, .Portfolio:hover, .Home:hover{
+  color: yellow;
+}
+
+
+
+.MZ-Logo:hover{
+  animation: heartBeat 1s;
+}
+
+
+@keyframes heartBeat {
+  0% {
+    transform: scale(1);
+  }
+
+  14% {
+    transform: scale(1.1);
+  }
+
+  28% {
+    transform: scale(1);
+  }
+
+  42% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+}
+
+
+/* jak sie unactive to wtedy tekst na gore idzie sprawdzic czemu
+*/
+
+
+@media screen and (max-width:1300px)
+{
+.Links{
+  box-shadow: 5px -3px 5px 0 black;
+  
+
+  
+
+
+  transform:  translateX(10%);
+  height: 85vh;
+  width: 100vw;
+  background: linear-gradient( to  right,darkblue, rgb(0,150,255));
+  flex-direction: column;
+  position: absolute;
+  top: 15vh;
+  left: -10%;
+  transition: all .5s ease-in-out;
+
+}
+
+
+
+.inactive{
+
+
+
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 5em;
+  transform: translateX(200%);
+  transition: all .5s ease-in-out;
+  transition: color 0s;
+}
+
+
+
+.inactive .Home,.Contact,.About, .Portfolio{
+  color: transparent;
+  background: transparent;
+  text-decoration: none;
+  border: none; 
+  outline: none;
+  font-size: 2em;
+  cursor: pointer;
+  margin: 1em 2em 1em 2em;
+  transition: all .5s ease-in-out;
+
+}
+  
+
+
+
+
+
+.Links .active{
+  color: yellow;
+}
+
+.Links button, .Links a{
+  color: rgb(235, 235, 235);
+  margin-top: 2em;
+}
+
+.Portfolio::after,.Home::after,.About::after,.Contact::after{
+  display: none;
+}
+
+body{
+  overflow: hidden;
+}
+
+.naglowek{
+  display: none;
+}
+.Menu{
+  display: flex;
+}
+.Menu-Parent{
+display: flex;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
