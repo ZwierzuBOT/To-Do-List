@@ -1,0 +1,119 @@
+
+.ContactDiv{
+    display: flex;
+    width: 100%;
+    height: 85vh;
+    justify-content: center;
+}
+
+.ContactDiv h1{
+    font-size: 2em;
+    padding: 1em;
+    width: 100%;
+
+}
+
+.ContactDiv h3{
+    display: flex;
+    justify-self: flex-start;
+    color: #e0e0e0;
+}
+
+.ContactDiv h5{
+    color: #d1c3be;
+    text-decoration: underline;
+    font-size: .7em;
+}
+
+.ContactDiv form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.ContactDiv form input, .ContactDiv form textarea, .ContactDiv form button{
+    padding: 1.5em;
+    margin-bottom: 2em;
+    outline: none;
+    border: none;
+    background-color: #e0e0e0;
+    color: black;
+    border-radius: 1em;
+    width: 100%;
+    font-size: 1em;
+    
+}
+
+.ContactDiv form textarea{
+    resize: none;
+}
+
+
+.ContactDiv form input::placeholder, .ContactDiv form textarea::placeholder
+{
+    color: black;
+}
+
+.ContactDiv form button::placeholder{
+    color: white;
+}
+.ContactDiv form button{
+    background-color: rgb(255, 115, 0);
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.SuccessBox{
+    display: flex;
+    position: absolute;
+    right: 3em;
+    top: 10em;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: rgb(255, 115, 0);
+    color:#e0e0e0;
+    border-radius: 1em;
+    width: 23em;
+    box-shadow: 5px 5px 10px 0 black;
+    transition: all 1s ease-in-out;
+}
+
+
+
+.HideBox{
+    display: none;
+    position: absolute;
+    right: 3em;
+    top: 10em;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: rgb(255, 115, 0);
+    color:#e0e0e0;
+    border-radius: 1em;
+    width: 23em;
+    box-shadow: 5px 5px 10px 0 black;
+    transition: all 1s ease-in-out;
+}
+
+.Close{
+    position: absolute;
+    top: -50%;
+    right: -5%;
+    width: 3em;
+    height: 3em;
+    background-color: rgb(255, 72, 0);
+    border-radius: 50%;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:500px) {
+    .SuccessBox{
+        left: auto;
+        right: auto;
+    }
+}
