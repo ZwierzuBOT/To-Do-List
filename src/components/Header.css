@@ -16,7 +16,7 @@ body{
     align-items: center;
     justify-content: center;
     background:linear-gradient(to right, darkblue, rgb(0,150,255));
-    box-shadow: 0px 10px 10px 0 black;
+    box-shadow: 0px 10px 10px 0 rgb(0, 20, 110);
   }
   
 .Links{
@@ -26,6 +26,7 @@ body{
     right: 5em;
     transform: translateX(0%);
     transition: all .5s ease-in-out;
+    z-index: 3;
 }
 
 .inactive{
@@ -35,6 +36,7 @@ body{
   right: 5em;
   transform: translateX(0%);
   transition: all .5s ease-in-out;
+  z-index: 3;
 }
 
 
@@ -48,7 +50,7 @@ body{
   font-size: 2em;
   cursor: pointer;
   margin: 1em 2em 1em 2em;
-  transition: all 1s ease-in-out;
+  transition: all .5s ease-in-out;
 }
   
 
@@ -61,14 +63,14 @@ body{
   height: .15em;
   background-color: gray;
   bottom: .9em;
-  left: 12%;
+  left: 16%;
   transition: all .5s ease-in-out;
   border-radius: 1em;
 }
 
 
 .Portfolio:hover::after{
-  left: 5%;
+  left: 6%;
   width: 6em;
   background-color: rgb(192, 192, 0);
 }
@@ -82,37 +84,19 @@ body{
   height: .15em;
   background-color: gray;
   bottom: .9em;
-  left: 37%;
+  left: 49%;
   transition: all .5s ease-in-out;
   border-radius: 1em;
 }
 
 
 .Home:hover::after{
-  left: 31%;
+  left: 41%;
   width: 5em;
   background-color: rgb(192, 192, 0);
 }
 
 
-.About::after{
-  content: "";
-  position: absolute;
-  width: 1em;
-  height: .15em;
-  background-color: gray;
-  bottom: .9em;
-  left: 60%;
-  transition: all .5s ease-in-out;
-  border-radius: 1em;
-}
-
-
-.About:hover::after{
-  left: 55%;
-  width: 5em;
-  background-color: rgb(192, 192, 0);
-}
 
 
 .Contact::after{
@@ -122,21 +106,20 @@ body{
   height: .15em;
   background-color: gray;
   bottom: .9em;
-  left: 85%;
+  left: 80%;
   transition: all .5s ease-in-out;
   border-radius: 1em;
 }
 
 
 .Contact:hover::after{
-  left: 79%;
+  left: 72%;
   width: 5.5em;
   background-color: rgb(192, 192, 0);
 }
 
 a.active button{
   color: yellow;
-
 }
 
 
@@ -146,6 +129,15 @@ a.active button{
   position: absolute;
   cursor: pointer;
 }
+
+
+.MenuActive{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  cursor: pointer;
+}
+
 
 .Menu-Parent{
   display: none;
@@ -180,7 +172,7 @@ height: 17vh;
 }
 
 
-.Contact:hover, .About:hover, .Portfolio:hover, .Home:hover{
+.Contact:hover, .Portfolio:hover, .Home:hover{
   color: yellow;
 }
 
@@ -211,6 +203,9 @@ height: 17vh;
   70% {
     transform: scale(1);
   }
+  100%{
+    transform: scale(1.1);
+}
 }
 
 
@@ -249,7 +244,7 @@ height: 17vh;
   align-items: center;
   position: absolute;
   right: 5em;
-  transform: translateX(200%);
+  transform: translateX(150%);
   transition: all .5s ease-in-out;
   transition: color 0s;
 }
@@ -283,7 +278,7 @@ height: 17vh;
   margin-top: 2em;
 }
 
-.Portfolio::after,.Home::after,.About::after,.Contact::after{
+.Portfolio::after,.Home::after,.Contact::after{
   display: none;
 }
 
@@ -296,9 +291,29 @@ body{
 }
 .Menu{
   display: flex;
+  transform:rotate(180deg);
+  cursor: pointer;
+  transition: all 1s ease-in-out;
 }
 .Menu-Parent{
 display: flex;
+}
+
+.Menu .parts{
+  transition: all .7s ease-in-out;
+  transform:rotate(180deg);
+}
+
+.MenuActive{
+  display: flex;
+  cursor: pointer;
+  transition: all .7s ease-in-out;;
+
+}
+
+.MenuActive .parts{
+  transition: all 1s ease-in-out;
+  transform:rotate(180deg);
 }
 }
 
