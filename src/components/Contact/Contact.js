@@ -11,18 +11,7 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
 
     let [BoxVis, setBoxVis] = useState("HideBox");
-/*
-    function BoxFunc(idk){
-        if (idk === "CloseOpen"){
-            BoxVis === "HideBox" ? setBoxVis("SuccessBox") : setBoxVis("HideBox");
-        }
-        else{
-            setBoxVis("SuccessBox");
-        }
 
-    }
-
-*/
     function Hide(){
         setBoxVis("HideBox");
     }
@@ -45,11 +34,13 @@ const Contact = () => {
             form.current,
             "W59nLwNdrbBpt3yJl"
         )
-        .then(
-            (result) => {
+        .then((result) =>{
 
-            }
-        )
+        },
+        (error) =>{
+            setBoxVis("BoxChanged");
+        }
+        );
     };
 
 
@@ -57,7 +48,7 @@ const Contact = () => {
     return ( 
         <div className="ContactDiv">
             <form ref={form} onSubmit={sendEmail}>
-                <h1>Contact Me</h1>
+                <h1>Hire Me!</h1>
                 <h5>zwierzchowski.mateo@gmail.com</h5>
 
                 <h3>Your Name</h3>
