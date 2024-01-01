@@ -22,7 +22,7 @@
 .ContactDiv h5{
     color: #d1c3be;
     text-decoration: underline;
-    font-size: .7em;
+    font-size: .9em;
 }
 
 .ContactDiv form{
@@ -81,7 +81,28 @@
     transition: all 1s ease-in-out;
 }
 
+.BoxChanged{
+    display: flex;
+    position: absolute;
+    right: 3em;
+    top: 10em;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: rgb(255, 0, 0);
+    color:#e0e0e0;
+    border-radius: 1em;
+    width: 23em;
+    box-shadow: 5px 5px 10px 0 black;
+    transition: all 1s ease-in-out;
+}
 
+
+.BoxChanged h4{
+  
+    content: "Email has not been sent. Check your internet connection";
+
+    
+}
 
 .HideBox{
     display: none;
@@ -108,6 +129,7 @@
     border-radius: 50%;
     border: 3px solid black;
     cursor: pointer;
+    
 }
 
 
@@ -115,5 +137,39 @@
     .SuccessBox{
         left: auto;
         right: auto;
+        transition: all 1s ease-in-out;
     }
 }
+
+
+
+
+
+.ContactDiv h1:hover{
+    animation: heartBeat 1s;
+}
+
+
+
+
+@keyframes heartBeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    14% {
+      transform: scale(1.1);
+    }
+  
+    28% {
+      transform: scale(1);
+    }
+  
+    42% {
+      transform: scale(1.1);
+    }
+  
+    70% {
+      transform: scale(1);
+    }
+  }
